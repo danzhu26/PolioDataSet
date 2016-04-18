@@ -5,15 +5,12 @@
  */
 package danielproject;
 
-import com.google.gson.Gson;
-import java.net.URL;
-
 /**
  *
  * @author csstudent
  */
-public class Dataset {
-  private Immunizations[] dimension;
+public class PolioDataSet {
+     private Immunizations[] dimension;
     private Info[] fact;
     
     public Immunizations[] getDimension() {
@@ -26,11 +23,10 @@ public class Dataset {
     @ Override
     public String toString(){
         String var = null;
-        for(int i=0; i= fact.length; i++){
+        for(int i=0; i< fact.length; i++){
             System.out.println(fact[i].toString());
-            var i = fact[i].getValue();
+            var = fact[i].getValue();
         }
         return var;
     }
-}  
-
+}

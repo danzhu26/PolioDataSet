@@ -10,16 +10,16 @@ package danielproject;
  * @author csstudent
  */
 public class Info {
-     private InfoAtt dim;
-    private int Value;
+    private InfoAtt dim;
+    private String Value;
     public InfoAtt getDim() {
         return dim;
     }
-    public int getValue(){
+    public String getValue(){
         return Value;
     }
     @ Override
     public String toString(){
-        return dim.getCOUNTRY() + " " + ":" + " " + this.getValue() + "S";
+        return dim.getCOUNTRY() + " " + ":" + " " + this.getValue() + "%";
     }
 }
