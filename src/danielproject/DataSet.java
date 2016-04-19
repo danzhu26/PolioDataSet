@@ -9,7 +9,7 @@ package danielproject;
  *
  * @author csstudent
  */
-public class PolioDataSet {
+public class DataSet {
      private Immunizations[] dimension;
     private Info[] fact;
     

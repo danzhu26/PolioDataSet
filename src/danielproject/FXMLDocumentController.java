@@ -57,7 +57,7 @@ public class FXMLDocumentController implements Initializable {
         scan.close();
         
         Gson gson = new Gson();
-        Dataset dS = gson.fromJson(str, Dataset.class);
+        DataSet dS = gson.fromJson(str, DataSet.class);
         
         System.out.println("Polio Immunizations in 1980");
         System.out.println(dS);

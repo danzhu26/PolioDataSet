@@ -16,9 +16,9 @@ import java.util.Scanner;
 public class FoodRunner {
     public static void main(String[] args) {
         String s = "http://apps.who.int/gho/athena/data/GHO/WHS4_544.json?profile=simple&filter=YEAR:1980";
-        URL url = null;
+        URL myurl = null;
         try {
-            url = new URL(s);
+            myurl = new URL(s);
         } catch (Exception e) {
             System.out.println("Improper URL " + s);
             System.exit(-1);
@@ -27,7 +27,7 @@ public class FoodRunner {
         // read from the URL
         Scanner scan = null;
         try {
-            scan = new Scanner(url.openStream());
+            scan = new Scanner(myurl.openStream());
         } catch (Exception e) {
             System.out.println("Could not connect to " + s);
             System.exit(-1);
@@ -40,7 +40,7 @@ public class FoodRunner {
         scan.close();
 
         Gson gson = new Gson();
-        PolioDataset ds = gson.fromJson(str, PolioDataset.class);
+        DataSet ds = gson.fromJson(str, DataSet.class);
 
         System.out.println(ds.toString());
     }
