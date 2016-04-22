@@ -16,7 +16,7 @@ public class DataSet {
     public Immunizations[] getDimension() {
         return dimension;
     }
-    public Info[] getFact(){
+    public Info[] getInfo(){
         return fact;
     }
     
@@ -28,5 +28,9 @@ public class DataSet {
             var = fact[i].getValue();
         }
         return var;
+    }
+
+    Iterable<Info> returnInfo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

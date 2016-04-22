@@ -13,6 +13,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 
 /**
@@ -61,6 +62,23 @@ public class FXMLDocumentController implements Initializable {
         
         System.out.println("Polio Immunizations in 1980");
         System.out.println(dS);
-    }    
+        
+        
+        Info[] infos = dS.getInfo();
+         
+        XYChart.Series<String, Number> countries = new XYChart.Series();
+        countries.setName("Countries of the World");
+       
     
+    
+      for (Info test : infos) {
+            if(test.getDim().getCOUNTRY() != null){
+                countries.getData().add(new XYChart.Data(test.getDim().getCOUNTRY(), test.getValue()));
+            }
+         
+        }
+         barChart.getData().add(countries);
+         
+    
+    }
 }
