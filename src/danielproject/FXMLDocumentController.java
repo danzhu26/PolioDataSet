@@ -9,12 +9,10 @@ import com.google.gson.Gson;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Scanner;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Label;
 
 /**
  *
@@ -25,7 +23,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private BarChart barChart;
     
-    @FXML
+    //@FXML
     //private void handleButtonAction(ActionEvent event) {
         //System.out.println("You clicked me!");
         //barChart.setText("Hello World!");

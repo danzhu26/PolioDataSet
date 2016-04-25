@@ -11,11 +11,11 @@ package danielproject;
  */
 public class Info {
     private InfoAtt dim;
-    private String Value;
+    private int Value;
     public InfoAtt getDim() {
         return dim;
     }
-    public String getValue(){
+    public int getValue(){
         return Value;
     }
     @ Override

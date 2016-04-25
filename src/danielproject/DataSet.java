@@ -22,12 +22,12 @@ public class DataSet {
     
     @ Override
     public String toString(){
-        String var = null;
+        int var = 0;
         for(int i=0; i< fact.length; i++){
             System.out.println(fact[i].toString());
             var = fact[i].getValue();
         }
-        return var;
+        return var + "";
     }
 
     Iterable<Info> returnInfo() {
